@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <link rel="icon" type="image/png" href="/NeoWare/img/logo.png" />
+      <title>NeoWare - Фигуры</title>
+      <meta charset="UTF-8">
+      <meta content="NeoWare - лучший б0т клиент Minecraft" name="description">
+      <meta content="Neo NeoWare NW minecraft Неовар krytickyt" name="keywords">
+      <meta name="description" content="Лучший Minecraft клиент">
+      <meta property="og:title" content="NeoWare - Фигуры">
+      <meta property="og:description" content="Лучший Minecraft клиент">
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="/NeoWare/img/logo.png" />
+      <meta name="theme-color" content="#AD069B" />
+      <link href="/NeoWare/vendor/bootstrap/css/bootstrap.min.css">
+      <link href="/NeoWare/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/NeoWare/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="/NeoWare/vendor/aos/aos.css" rel="stylesheet">
+      <link href="/NeoWare/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link href="/NeoWare/css/main.css" rel="stylesheet">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="/NeoWare/snowFlakes/snow.min.css" rel="stylesheet">
+   </head>
+   <body class="index-page">
+      <script src="/NeoWare/snowFlakes/Snow.js"></script>
+      <script>
+         const now = new Date();
+         const currentMonth = now.getMonth();
+         if (currentMonth === 10 || currentMonth === 11 || currentMonth === 0 || currentMonth === 1) {
+             new Snow({
+                 showSnowBalls: false,
+                 countSnowflake: 30,
+             });}
+      </script>
+      <header>
+         <div>
+            <header id="header" class="header d-flex align-items-center fixed-top ">
+               <div class="container-fluid container-xl position-relative d-flex align-items-center">
+                  <a href="/NeoWare/" class="logo d-flex align-items-center me-auto">
+                     <img src="/NeoWare/img/logo.png" alt="NW">
+                     <h1>NeoWare</h1>
+                  </a>
+                  <nav id="navmenu" class="navmenu">
+                     <ul>
+                        <li><a href="/NeoWare/">Главная<br></a></li>
+                        <li><a href="/NeoWare/captcha/">Капча</a></li>
+                        <li><a href="/NeoWare/figures/">Фигуры</a></li>
+                        <li><a href="https://krytickyt.github.io/NeoWareWiki">Wiki</a></li>
+                     </ul>
+                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                  </nav>
+               </div>
+            </header>
+         </div>
+      </header>
+      <main class="container" style="flex-grow: 1; margin-top: 10%; min-height: 100vh; opacity: 100;" data-aos="zoom-out">
+         <div>
+            <p class="text-center fw-bold fs-3">Построение фигуры для ботов</p>
+            <p class="text-center">На данной странице вы можете создать фигуру для построения ботов в игре.</p>
+            <p class="text-center">ЛКМ - установка точки, ПКМ - установка центра относительно вас</p>
+            <br>
+         </div>
+         <style>
+            .gridc {
+            margin-top: 20px;
+            margin-left: 19.3%;
+            display: grid;
+            grid-template-columns: repeat(20, 40px);
+            grid-template-rows: repeat(20, 40px);
+            gap: 5px;
+            }
+            .buttonc {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            }
+            .buttonc.blue-outline {
+            border: 2px solid blue;
+            background-color: green;
+            }
+            .button {
+                background-color: transparent;
+                color: white;
+                padding: 10px 20px;
+                cursor: pointer;
+                transition: color 0.3s, border-color 0.3s;
+            }
+         
+            .button:hover {
+                color: #ad069c;
+            }
+
+            #fileInput {
+                display: none;
+            }
+         </style>
+         <div class="gridc" id="gridc"></div>
+         <div class="text-center" style="margin-top: 10px">
+            <button id="resetButton" class="button" style="margin-right: 10px">Сброс</button>
+            <button id="saveButton" class="button">Сохранить</button>
+            <button id="importButton" class="button">Импортировать</button>
+            <input type="file" id="fileInput" accept=".json">
+            <pre id="fileContent"></pre>
+
+            <div id="botsCount" style="margin-top: 0px; font-size: 20px;"></div>
+         </div>
+<script>
+const _0x13b63f=_0x5afa;function _0x4431(){const _0x1f075a=['l=\x22','cYOjp','substr','sVpfP','files','saveButton','stringify','resetButto','split','torAll','DAYaa','ent','target','createObje','blue-outli','DlVWq','BKcjl','12jcZkGF','EKgHc','revokeObje','RnSDi','ata-row=\x22','BgnNB','tor','ctURL','green','ZNufQ','kDINt','innerText','ботов:\x20',';charset=u','gridc','figure.jso','kJjMK','OpIbN','rBScv','LKkwP','новили\x20цен','className','text/plain','tqLoS','VYcrm','ZMfuj','BLGPH','stener','.buttonc','upAZM','body','10wOlSlZ','importButt','contextmen','KbrXq','background','BanCF','cERXp','add','\x22][data-co','wLFvx','KmdNb','appendChil','7nQaZsj','BnAxl','rvYqj','QkLYi','RpdMU','hLNHz','result','change','botsCount','wNwCF','2962480DRmgWc','jtwVd','qTKzD','oBeBd','repeat','Color','ById','button','matrix','yKTuA','.buttonc[d','1354266gQRJHs','readAsText','7828569gkafuQ','ToAyL','length','preventDef','RpHwN','click','fileInput','dataset','2vLRbrA','fFSMp','getElement','Требуется\x20','createElem','pbPed','BXQeu','grxNw','RIDRu','buttonc','col','hnLxY','style','тр\x20(ПКМ)','Hckfn','row','white','ault','forEach','4886028qKuCTQ','parse','Вы\x20не\x20уста','zoTMd','LWWxw','removeChil','querySelec','href','onload','2811369YxVnvP','qiaPA','29920099KWcIgq','iwJGj','download','addEventLi','classList','15QAqwxe','remove','1167501GCowaz','kvkST','tf-8'];_0x4431=function(){return _0x1f075a;};return _0x4431();}(function(_0x47cfb1,_0x147480){const _0x585cbd=_0x5afa,_0x4bc362=_0x47cfb1();while(!![]){try{const _0x53fb2f=parseInt(_0x585cbd(0xab))/(-0x3*0x4b9+0x13*0x19+0x1*0xc51)*(-parseInt(_0x585cbd(0x86))/(0x269f*0x1+0x3*-0x7bf+-0xf60))+parseInt(_0x585cbd(0xa2))/(-0x29*-0x25+-0x21eb+-0x1c01*-0x1)+-parseInt(_0x585cbd(0x99))/(-0x67b+0x1*-0x2382+0x2a01*0x1)+-parseInt(_0x585cbd(0xa9))/(-0x13fc*-0x1+-0xbc+-0x133b)*(-parseInt(_0x585cbd(0x7c))/(0x2008+-0x24f3+-0x17*-0x37))+parseInt(_0x585cbd(0xea))/(0xcb7+0x736+-0x13e6)*(-parseInt(_0x585cbd(0xf4))/(-0x1*-0x147a+-0x1311+-0x161))+-parseInt(_0x585cbd(0x7e))/(0x24a6+0x10a0*-0x2+-0x29*0x15)*(parseInt(_0x585cbd(0xde))/(0xf0c+0xe2a+-0x1d2c))+-parseInt(_0x585cbd(0xa4))/(-0x1389+-0xd*0xc5+0x1d95)*(-parseInt(_0x585cbd(0xbf))/(-0xa21*0x1+-0x2453+0x2e80));if(_0x53fb2f===_0x147480)break;else _0x4bc362['push'](_0x4bc362['shift']());}catch(_0x49426a){_0x4bc362['push'](_0x4bc362['shift']());}}}(_0x4431,-0x3*-0x6048b+0x37*0x5c01+0x1*-0x1b0f86));const grid=document[_0x13b63f(0x88)+_0x13b63f(0xfa)](_0x13b63f(0xcd)),resetButton=document[_0x13b63f(0x88)+_0x13b63f(0xfa)](_0x13b63f(0xb5)+'n'),saveButton=document[_0x13b63f(0x88)+_0x13b63f(0xfa)](_0x13b63f(0xb3)),importButton=document[_0x13b63f(0x88)+_0x13b63f(0xfa)](_0x13b63f(0xdf)+'on');let centerLocation=null;updateCounter(0x166f*-0x1+0x1*-0x3a0+0x1a0f);for(let row=-0x2545+-0x199c+0x3ee2;row<=-0x7a8+0x2*0xb65+-0xf0e;row++){for(let col=0x1*-0x26fb+0x2464+0x298;col<=-0x442*-0x5+0x11d2+-0x2708;col++){const button=document[_0x13b63f(0x8a)+_0x13b63f(0xb9)](_0x13b63f(0x78));button[_0x13b63f(0xd4)]=_0x13b63f(0x8f),button[_0x13b63f(0x85)][_0x13b63f(0x95)]=row,button[_0x13b63f(0x85)][_0x13b63f(0x90)]=col,button[_0x13b63f(0x92)][_0x13b63f(0xe2)+_0x13b63f(0xf9)]=_0x13b63f(0xc7),button[_0x13b63f(0xa7)+_0x13b63f(0xda)](_0x13b63f(0x83),function(){const _0x556ddb=_0x13b63f,_0xd95612={'BLGPH':function(_0x3aeb42,_0xaedd32){return _0x3aeb42===_0xaedd32;},'BnAxl':_0x556ddb(0xc7),'yKTuA':_0x556ddb(0x96),'BKcjl':function(_0x5d8171){return _0x5d8171();}};_0xd95612[_0x556ddb(0xd9)](button[_0x556ddb(0x92)][_0x556ddb(0xe2)+_0x556ddb(0xf9)],_0xd95612[_0x556ddb(0xeb)])?button[_0x556ddb(0x92)][_0x556ddb(0xe2)+_0x556ddb(0xf9)]=_0xd95612[_0x556ddb(0x7a)]:button[_0x556ddb(0x92)][_0x556ddb(0xe2)+_0x556ddb(0xf9)]=_0xd95612[_0x556ddb(0xeb)],_0xd95612[_0x556ddb(0xbe)](updateBotsCounter);}),button[_0x13b63f(0xa7)+_0x13b63f(0xda)](_0x13b63f(0xe0)+'u',function(_0x30c1af){const _0x3d24ed=_0x13b63f,_0x483820={'DAYaa':_0x3d24ed(0xbc)+'ne'};_0x30c1af[_0x3d24ed(0x81)+_0x3d24ed(0x97)](),centerLocation&&centerLocation[_0x3d24ed(0xa8)][_0x3d24ed(0xaa)](_0x483820[_0x3d24ed(0xb8)]),button[_0x3d24ed(0xa8)][_0x3d24ed(0xe5)](_0x483820[_0x3d24ed(0xb8)]),centerLocation=button;}),grid[_0x13b63f(0xe9)+'d'](button);}}resetButton[_0x13b63f(0xa7)+_0x13b63f(0xda)](_0x13b63f(0x83),function(){const _0x5cb831=_0x13b63f,_0x552ec8={'EKgHc':_0x5cb831(0xc7),'BXQeu':_0x5cb831(0xbc)+'ne','kDINt':_0x5cb831(0xdb),'kvkST':function(_0xcfa7ef,_0x54a6f5){return _0xcfa7ef(_0x54a6f5);}},_0x5262f4=document[_0x5cb831(0x9f)+_0x5cb831(0xb7)](_0x552ec8[_0x5cb831(0xc9)]);_0x5262f4[_0x5cb831(0x98)](_0x24215e=>{const _0x41f2de=_0x5cb831;_0x24215e[_0x41f2de(0x92)][_0x41f2de(0xe2)+_0x41f2de(0xf9)]=_0x552ec8[_0x41f2de(0xc0)],_0x24215e[_0x41f2de(0xa8)][_0x41f2de(0xaa)](_0x552ec8[_0x41f2de(0x8c)]);}),centerLocation=null,_0x552ec8[_0x5cb831(0xac)](updateCounter,-0x1ab5+-0x217c+-0x1*-0x3c31);}),saveButton[_0x13b63f(0xa7)+_0x13b63f(0xda)](_0x13b63f(0x83),function(){const _0x4a3cbf=_0x13b63f,_0x562537={'ZMfuj':function(_0x4a9e2b,_0x3c9f21){return _0x4a9e2b===_0x3c9f21;},'cYOjp':_0x4a3cbf(0x96),'tqLoS':function(_0x473a5c,_0x65a3ea){return _0x473a5c-_0x65a3ea;},'ToAyL':function(_0x5e91dd,_0x5d7ff9,_0x129aa3){return _0x5e91dd(_0x5d7ff9,_0x129aa3);},'BgnNB':function(_0x520d2f,_0x454c0f){return _0x520d2f-_0x454c0f;},'Hckfn':function(_0x4aebac,_0x19f1f0,_0x2d576f,_0x49e656){return _0x4aebac(_0x19f1f0,_0x2d576f,_0x49e656);},'LKkwP':_0x4a3cbf(0xd5)+_0x4a3cbf(0xcc)+_0x4a3cbf(0xad),'qTKzD':_0x4a3cbf(0xdb),'KbrXq':function(_0x144702,_0x2a84b2){return _0x144702<_0x2a84b2;},'RpHwN':function(_0x1b4021,_0x44f03f){return _0x1b4021(_0x44f03f);},'kJjMK':function(_0x14c837,_0x5a854c){return _0x14c837==_0x5a854c;},'BanCF':function(_0xb8607d,_0x1d0d24){return _0xb8607d(_0x1d0d24);},'iwJGj':_0x4a3cbf(0x9b)+_0x4a3cbf(0xd3)+_0x4a3cbf(0x93),'LWWxw':function(_0x579ecd,_0x19c565){return _0x579ecd-_0x19c565;},'hnLxY':function(_0x293174,_0x4c4235,_0x4aa063){return _0x293174(_0x4c4235,_0x4aa063);},'RIDRu':_0x4a3cbf(0xce)+'n'},_0x3976e1=document[_0x4a3cbf(0x9f)+_0x4a3cbf(0xb7)](_0x562537[_0x4a3cbf(0xf6)]),_0x4e2a9b=[];for(let _0xa176df=0x3d*-0x9d+-0x2132+-0x469b*-0x1;_0x562537[_0x4a3cbf(0xe1)](_0xa176df,-0x1*0xbbd+-0xe3a*-0x2+-0x10a3);_0xa176df++){_0x4e2a9b[_0xa176df]='0'[_0x4a3cbf(0xf8)](-0xb*-0x49+0xbdc+-0xeeb);}let _0x2b0f96=-0x121c+0x2619+-0x7*0x2db;_0x3976e1[_0x4a3cbf(0x98)](_0x2719f0=>{const _0x8f498=_0x4a3cbf;if(_0x562537[_0x8f498(0xd8)](_0x2719f0[_0x8f498(0x92)][_0x8f498(0xe2)+_0x8f498(0xf9)],_0x562537[_0x8f498(0xaf)])){const _0x47b044=_0x562537[_0x8f498(0xd6)](_0x562537[_0x8f498(0x7f)](parseInt,_0x2719f0[_0x8f498(0x85)][_0x8f498(0x95)],-0x25b1*0x1+0x1f*-0x8d+0xe6*0x3d),-0x3*-0x1b+-0x504*0x3+0xebc),_0x85aacf=_0x562537[_0x8f498(0xc4)](_0x562537[_0x8f498(0x7f)](parseInt,_0x2719f0[_0x8f498(0x85)][_0x8f498(0x90)],0x329+-0x25dc+0x22bd),-0x1bc6+-0x21cd+-0xe*-0x466);_0x4e2a9b[_0x47b044]=_0x562537[_0x8f498(0x94)](setCharAt,_0x4e2a9b[_0x47b044],_0x85aacf,'#'),_0x2b0f96++;}}),_0x562537[_0x4a3cbf(0x82)](updateCounter,_0x2b0f96);if(_0x562537[_0x4a3cbf(0xcf)](centerLocation,null)){_0x562537[_0x4a3cbf(0xe3)](alert,_0x562537[_0x4a3cbf(0xa5)]);return;}const _0x1a450a=_0x562537[_0x4a3cbf(0xd6)](centerLocation[_0x4a3cbf(0x85)][_0x4a3cbf(0x90)],0x1fd1+-0x1ddb+0x3*-0xa7),_0x4368e3=_0x562537[_0x4a3cbf(0x9d)](centerLocation[_0x4a3cbf(0x85)][_0x4a3cbf(0x95)],0x25f*0x1+-0x367*-0x7+-0x1a2f),_0x2decab={'cx':_0x562537[_0x4a3cbf(0x7f)](parseInt,_0x1a450a,0x70c+-0x1d4d+0x164b),'cy':_0x562537[_0x4a3cbf(0x7f)](parseInt,_0x4368e3,-0x1e*-0x4e+0x26bd+-0x2fd7),'matrix':_0x4e2a9b};_0x562537[_0x4a3cbf(0x91)](_0x48583f,_0x562537[_0x4a3cbf(0x8e)],JSON[_0x4a3cbf(0xb4)](_0x2decab));function _0x48583f(_0x5eb8ec,_0x547728){const _0x48ca81=_0x4a3cbf,_0x290dc3=new Blob([_0x547728],{'type':_0x562537[_0x48ca81(0xd2)]}),_0x3c3147=URL[_0x48ca81(0xbb)+_0x48ca81(0xc6)](_0x290dc3),_0x39b0b8=document[_0x48ca81(0x8a)+_0x48ca81(0xb9)]('a');_0x39b0b8[_0x48ca81(0xa0)]=_0x3c3147,_0x39b0b8[_0x48ca81(0xa6)]=_0x5eb8ec,document[_0x48ca81(0xdd)][_0x48ca81(0xe9)+'d'](_0x39b0b8),_0x39b0b8[_0x48ca81(0x83)](),document[_0x48ca81(0xdd)][_0x48ca81(0x9e)+'d'](_0x39b0b8),URL[_0x48ca81(0xc1)+_0x48ca81(0xc6)](_0x3c3147);}}),importButton[_0x13b63f(0xa7)+_0x13b63f(0xda)](_0x13b63f(0x83),function(){const _0x23fd44=_0x13b63f,_0x19ba61={'wNwCF':_0x23fd44(0x84)};document[_0x23fd44(0x88)+_0x23fd44(0xfa)](_0x19ba61[_0x23fd44(0xf3)])[_0x23fd44(0x83)]();}),document[_0x13b63f(0x88)+_0x13b63f(0xfa)](_0x13b63f(0x84))[_0x13b63f(0xa7)+_0x13b63f(0xda)](_0x13b63f(0xf1),function(_0x4cf752){const _0x5bf74f=_0x13b63f,_0x253fde={'VYcrm':function(_0xb82707,_0x2bc31e,_0xe90289){return _0xb82707(_0x2bc31e,_0xe90289);},'grxNw':function(_0xc9109b,_0x37c77e){return _0xc9109b==_0x37c77e;},'pbPed':_0x5bf74f(0x96),'wLFvx':_0x5bf74f(0xc7),'KmdNb':_0x5bf74f(0xbc)+'ne','fFSMp':function(_0x277ac7,_0x50356c){return _0x277ac7(_0x50356c);}},_0x28119e=_0x4cf752[_0x5bf74f(0xba)][_0x5bf74f(0xb2)][-0xb*-0x349+-0x922+0x1b01*-0x1];if(_0x28119e){const _0x4aecf9=new FileReader();_0x4aecf9[_0x5bf74f(0xa1)]=function(_0x9383b9){const _0x408173=_0x5bf74f,_0x1f81c7=_0x9383b9[_0x408173(0xba)][_0x408173(0xf0)];try{const _0x1d77d3=JSON[_0x408173(0x9a)](_0x1f81c7),_0x467de4=_0x253fde[_0x408173(0xd7)](getButton,_0x1d77d3['cy'],_0x1d77d3['cx']);centerLocation&&centerLocation[_0x408173(0xa8)][_0x408173(0xaa)](_0x253fde[_0x408173(0xe8)]);let _0x53aa14=-0x23ee+-0x2*-0x713+-0xa4*-0x22;_0x467de4[_0x408173(0xa8)][_0x408173(0xe5)](_0x253fde[_0x408173(0xe8)]),centerLocation=_0x467de4,_0x1d77d3[_0x408173(0x79)][_0x408173(0x98)]((_0x28b14e,_0x58c51c)=>{const _0x3d9e4e=_0x408173,_0x3df66b={'oBeBd':function(_0x43b0e3,_0xc41db8,_0x13c844){const _0x244748=_0x5afa;return _0x253fde[_0x244748(0xd7)](_0x43b0e3,_0xc41db8,_0x13c844);},'zoTMd':function(_0x297e63,_0xe66a59){const _0x4d6b7a=_0x5afa;return _0x253fde[_0x4d6b7a(0x8d)](_0x297e63,_0xe66a59);},'rBScv':_0x253fde[_0x3d9e4e(0x8b)],'RpdMU':_0x253fde[_0x3d9e4e(0xe7)]};_0x28b14e[_0x3d9e4e(0xb6)]('')[_0x3d9e4e(0x98)]((_0x10dc7e,_0x22b2f8)=>{const _0x7c5e3a=_0x3d9e4e,_0x4df774=_0x3df66b[_0x7c5e3a(0xf7)](getButton,_0x58c51c,_0x22b2f8);_0x3df66b[_0x7c5e3a(0x9c)](_0x10dc7e,'#')?(_0x4df774[_0x7c5e3a(0x92)][_0x7c5e3a(0xe2)+_0x7c5e3a(0xf9)]=_0x3df66b[_0x7c5e3a(0xd1)],_0x53aa14++):_0x4df774[_0x7c5e3a(0x92)][_0x7c5e3a(0xe2)+_0x7c5e3a(0xf9)]=_0x3df66b[_0x7c5e3a(0xee)];});}),_0x253fde[_0x408173(0x87)](updateCounter,_0x53aa14);}catch(_0x1c099b){}},_0x4aecf9[_0x5bf74f(0x7d)](_0x28119e);}});function getButton(_0x2fa8f1,_0x459e1f){const _0x465b85=_0x13b63f,_0x513776={'sVpfP':function(_0x27f0dc,_0x5346db){return _0x27f0dc+_0x5346db;},'jtwVd':function(_0x59c6bd,_0xd73309){return _0x59c6bd+_0xd73309;}},_0x5d0c2c=document[_0x465b85(0x9f)+_0x465b85(0xc5)](_0x465b85(0x7b)+_0x465b85(0xc3)+_0x513776[_0x465b85(0xb1)](_0x2fa8f1,0x1837+0x1*0x179b+-0x2fd1)+(_0x465b85(0xe6)+_0x465b85(0xae))+_0x513776[_0x465b85(0xf5)](_0x459e1f,0x5c*-0x3d+0x24ad+-0xec0)+'\x22]');return _0x5d0c2c;};function setCharAt(_0x33e88a,_0x348359,_0x32553e){const _0x165780=_0x13b63f,_0x697edf={'upAZM':function(_0x127b97,_0x3a58bf){return _0x127b97>_0x3a58bf;},'hLNHz':function(_0x63ce64,_0x149c52){return _0x63ce64-_0x149c52;},'RnSDi':function(_0x41af08,_0x354462){return _0x41af08+_0x354462;}};if(_0x697edf[_0x165780(0xdc)](_0x348359,_0x697edf[_0x165780(0xef)](_0x33e88a[_0x165780(0x80)],0x7c+0x25ab+-0x2626)))return _0x33e88a;return _0x697edf[_0x165780(0xc2)](_0x697edf[_0x165780(0xc2)](_0x33e88a[_0x165780(0xb0)](0x152e*-0x1+-0x371+0x189f,_0x348359),_0x32553e),_0x33e88a[_0x165780(0xb0)](_0x697edf[_0x165780(0xc2)](_0x348359,0xb71*0x3+-0x4ee*0x6+-0x25f*0x2)));}function _0x5afa(_0x5ea4f7,_0x15f0d1){const _0x21cc18=_0x4431();return _0x5afa=function(_0x5e9c77,_0xa57238){_0x5e9c77=_0x5e9c77-(0x1fdf+0x47c*-0x2+-0x166f);let _0x2214f6=_0x21cc18[_0x5e9c77];return _0x2214f6;},_0x5afa(_0x5ea4f7,_0x15f0d1);}function updateCounter(_0x5529fd){const _0x4cb645=_0x13b63f,_0x260e61={'DlVWq':_0x4cb645(0xf2),'rvYqj':function(_0x13fc60,_0x4bf5af){return _0x13fc60+_0x4bf5af;},'qiaPA':_0x4cb645(0x89)+_0x4cb645(0xcb)};document[_0x4cb645(0x88)+_0x4cb645(0xfa)](_0x260e61[_0x4cb645(0xbd)])[_0x4cb645(0xca)]=_0x260e61[_0x4cb645(0xec)](_0x260e61[_0x4cb645(0xa3)],_0x5529fd);}function updateBotsCounter(){const _0xd045e2=_0x13b63f,_0x5454b4={'cERXp':function(_0x1423fe,_0x48e4d){return _0x1423fe===_0x48e4d;},'QkLYi':_0xd045e2(0x96),'OpIbN':_0xd045e2(0xdb),'ZNufQ':function(_0x5dec79,_0x4d3b76){return _0x5dec79(_0x4d3b76);}},_0x442cd8=document[_0xd045e2(0x9f)+_0xd045e2(0xb7)](_0x5454b4[_0xd045e2(0xd0)]);let _0xd8e403=-0x1579+-0x9e1+0x1f5a;_0x442cd8[_0xd045e2(0x98)](_0x1392e0=>{const _0x20ea70=_0xd045e2;_0x5454b4[_0x20ea70(0xe4)](_0x1392e0[_0x20ea70(0x92)][_0x20ea70(0xe2)+_0x20ea70(0xf9)],_0x5454b4[_0x20ea70(0xed)])&&_0xd8e403++;}),_0x5454b4[_0xd045e2(0xc8)](updateCounter,_0xd8e403);}
+</script>
+      </main>
+      <div>
+         <footer>
+            <div>
+               <footer id="footer" class="footer">
+                  <div class="container footer-top">
+                     <div class="row gy-4">
+                        <div class="col-lg-4 col-md-6 footer-about" style="margin-left: auto; width: 17%;">
+                           <a href="/NeoWare/" class="d-flex align-items-center">
+                           <img src="/NeoWare/img/logo.png" class="px-2" alt="" width="50px;">
+                           <span>NeoWare</span>
+                           </a>
+                           <div class="footer-contact pt-3">
+                              <p>Мы никак не связаны с:</p>
+                              <p>Mojang Studios</p>
+                              <p>Microsoft</p>
+                              <p>и т.д.</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 footer-links" style="margin-right: -30px;">
+                           <h4>Навигация</h4>
+                           <ul>
+                              <li><i class="bi bi-chevron-right"></i> <a href="/NeoWare/">Главная</a></li>
+                              <li><i class="bi bi-chevron-right"></i> <a href="/NeoWare/#faq">Вопросы</a></li>
+                              <li><i class="bi bi-chevron-right"></i> <a href="/NeoWare/#alt-features">Наши преимущества</a></li>
+                           </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 footer-links" style="margin-right: 30px;">
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                           <h4>Наши социальные сети</h4>
+                           <div class="social-links d-flex">
+                              <a href="https://www.youtube.com/@krytickyt" target="_blank" style="font-size: 25px;"><i class="bi bi-youtube"></i></a>
+                              <a href="https://discord.com/invite/37UVpdX8bn" target="_blank" style="font-size: 25px;"><i class="bi bi-discord"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container copyright text-center mt-4">
+                     NeoWare ▪ 2023-2025
+                  </div>
+               </footer>
+            </div>
+         </footer>
+      </div>
+      </footer>
+      <a href="" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <script src="/NeoWare/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="/NeoWare/vendor/aos/aos.js"></script>
+      <script src="/NeoWare/js/main.js"></script>
+   </body>
+</html>
