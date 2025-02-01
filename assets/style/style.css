@@ -88,7 +88,7 @@ ul {
 /*****Few personal details*****/
 .info-box {
   width: 100%;
-  background-color: #8919e6;
+  background-color: #121214;
   border-radius: 0.5rem;
   border: 2px solid #343b45;
   padding: 1rem 0;
@@ -204,7 +204,7 @@ ul {
 }
 .social-media div:hover {
   color: #ffffff;
-  background-color: #343b45;
+  background-color: #121214;
 }
 
 /***responsive for desktop***/
