@@ -135,7 +135,7 @@ ul {
   text-align: left;
 }
 .details ul li {
-  color: #4b4c4f;
+  color: #121214;
   padding: 0.5rem;
 }
 .details b {
@@ -194,7 +194,7 @@ ul {
   border-radius: 0.5rem;
   backdrop-filter: blur(10px);
   border: 2px solid #343b45;
-  background-color: #f5f5fc;
+  background-color: #121214;
   padding: 1rem 0;
   transition: all 0.3s ease;
   display: flex;
@@ -203,7 +203,7 @@ ul {
   gap: 0.6rem;
 }
 .social-media div:hover {
-  color: #ffffff;
+  color: #121214;
   background-color: #121214;
 }
 
