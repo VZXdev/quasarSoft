@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #f2f3fb;
+  background: #121214;
   width: 100%;
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
@@ -88,7 +88,7 @@ ul {
 /*****Few personal details*****/
 .info-box {
   width: 100%;
-  background-color: #f5f5fc;
+  background-color: #8919e6;
   border-radius: 0.5rem;
   border: 2px solid #343b45;
   padding: 1rem 0;
