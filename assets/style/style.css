@@ -135,7 +135,7 @@ ul {
   text-align: left;
 }
 .details ul li {
-  color: #121214;
+  color: #ffffff;
   padding: 0.5rem;
 }
 .details b {
@@ -203,7 +203,7 @@ ul {
   gap: 0.6rem;
 }
 .social-media div:hover {
-  color: #121214;
+  color: #ffffff;
   background-color: #121214;
 }
 
