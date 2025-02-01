@@ -40,7 +40,7 @@ ul {
 .picture {
   height: 9rem;
   width: 9rem;
-  background-color: #52c8ff;
+  background-color: #ffffff;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -139,7 +139,7 @@ ul {
   padding: 0.5rem;
 }
 .details b {
-  color: #00445a;
+  color: #ffffff;
   letter-spacing: 1.3px;
 }
 .details .about {
@@ -154,14 +154,14 @@ ul {
 .project {
   display: flex;
   align-items: center;
-  border-bottom: 1.5px solid #0000001a;
+  border-bottom: 1.5px solid #ffffff;
   padding: 0;
   text-decoration: none;
 }
 
 .project i {
   font-size: 2rem;
-  color: #26caff;
+  color: #ffffff;
 }
 
 .project ul {
@@ -176,7 +176,7 @@ ul {
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #000;
+  color: #ffffff;
 }
 
 .project ul small {
