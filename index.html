@@ -230,6 +230,12 @@
                      <div class="text-2xl font-bold" id="startups">HTTP 404</div>
                   </div>
                </div>
+               <script>
+               function cb(response) {
+                   document.getElementById('startups').innerText = response.value;
+               }
+               </script>
+               <script async src="https://api.countapi.xyz/hit/vzxdev.github.io/startups?callback=cb"></script>
                <div class="p-6 rounded-lg flex items-center space-x-4" style="background-color: #191923;  color: #ffffff;">
                   <i class="fas fa-sync-alt text-2xl"></i>
                   <div>
