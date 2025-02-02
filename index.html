@@ -230,12 +230,27 @@
                      <div class="text-2xl font-bold" id="startups">HTTP 404</div>
                   </div>
                </div>
-               <script>
-               function cb(response) {
-                   document.getElementById('startups').innerText = response.value;
-               }
-               </script>
-               <script async src="https://api.countapi.xyz/hit/vzxdev.github.io/startups?callback=cb"></script>
+              <script>
+              async function fetchUser Count() {
+                  const response = await fetch('https://vzxdev.github.io/quasarSoft/api/user-count');
+                  const data = await response.json();
+                  document.getElementById('users').innerText = data.count;
+              }
+      
+              async function incrementUser Count() {
+                  await fetch('https://vzxdev.github.io/quasarSoft/api/increment-user', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json'
+                      }
+                  });
+                  await fetchUser Count();
+              }
+      
+              window.addEventListener('DOMContentLoaded', () => {
+                  incrementUser Count();
+              });
+             </script>
                <div class="p-6 rounded-lg flex items-center space-x-4" style="background-color: #191923;  color: #ffffff;">
                   <i class="fas fa-sync-alt text-2xl"></i>
                   <div>
