@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Authentication Example</title>
+</head>
+<body>
+    <script>
+        // Predefined valid credentials
+        const validCredentials = {
+            username: "QwaQwa",
+            password: "233"
+        };
+
+        // Function to prompt for credentials
+        function authenticate() {
+            const username = prompt("Enter username:");
+            const password = prompt("Enter password:");
+
+            // Check if the credentials are valid
+            if (username === validCredentials.username && password === validCredentials.password) {
+                fetchContent();
+            } else {
+                alert("Not authorized");
+            }
+        }
+
+        // Function to fetch content from the URL
+        function fetchContent() {
+            const url = 'https://vzxdev.github.io/quasarSoft/3Ddebug/debug.html';
+
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.body.innerHTML += data; // Append the fetched content to the body
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        }
+
+        // Start the authentication process
+        authenticate();
+    </script>
+</body>
+</html>
