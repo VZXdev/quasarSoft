@@ -30,7 +30,7 @@
                         return response.text();
                     })
                     .then(data => {
-                        document.body.innerHTML += data; 
+                        document.body.innerHTML = data; 
                     })
                     .catch(error => {
                         console.error('There was a problem with the fetch operation:', error);
