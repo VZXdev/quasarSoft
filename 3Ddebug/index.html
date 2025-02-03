@@ -27,6 +27,38 @@
       <script src="https://cdn.tailwindcss.com"></script>
       <link href="/quasarSoft/snowFlakes/snow.min.css" rel="stylesheet">
    </head>
+    <body class="index-page">
+      <script src="/quasarSoft/snowFlakes/Snow.js"></script>
+      <script>
+         const now = new Date();
+         const currentMonth = now.getMonth();
+         if (currentMonth === 10 || currentMonth === 11 || currentMonth === 0 || currentMonth === 1) {
+             new Snow({
+                 showSnowBalls: false,
+                 countSnowflake: 30,
+             });}
+      </script>
+      <header>
+         <div>
+            <header id="header" class="header d-flex align-items-center fixed-top ">
+               <div class="container-fluid container-xl position-relative d-flex align-items-center">
+                  <a href="/quasarSoft/" class="logo d-flex align-items-center me-auto">
+                     <img src="/quasarSoft/img/logo.png" alt="NW">
+                     <h1>3D DEBUG</h1>
+                  </a>
+                  <nav id="navmenu" class="navmenu">
+                     <ul>
+                        <li><a href="/quasarSoft/">Главная<br></a></li>
+                        <li><a href="/quasarSoft/about/">О нас</a></li>
+                        <li><a href="/quasarSoft/figures/">Фигуры</a></li>
+                        <li><a href="https://vzxdev.github.io/quasarSoftWiki">Wiki</a></li>
+                     </ul>
+                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                  </nav>
+               </div>
+            </header>
+         </div>
+      </header>
     <script>
         // state: 0=uninitialised, 1=running, 2=stopping, 3=stopped
         var animation_state = 0;
@@ -292,6 +324,35 @@
             <canvas id="animation" width="800" height="800"></canvas>
         </div>
     </div>
-    
+    <div>
+         <footer>
+            <div>
+               <footer id="footer" class="footer">
+                  <div class="container footer-top">
+                     <div class="row gy-4">
+                        <div class="col-lg-4 col-md-6 footer-about" style="margin-left: auto; width: 17%;">
+                           <a href="/quasarSoft/" class="d-flex align-items-center">
+                     
+                           </a>
+                           
+                        </div>
+                        
+                        <div class="col-lg-2 col-md-3 footer-links" style="margin: 30px;">
+                        </div>
+                        
+                     </div>
+                  </div>
+                  <div class="container copyright text-center mt-4">
+                     3D DEBUG ▪ 2023-2025
+                  </div>
+               </footer>
+            </div>
+         </footer>
+      </div>
+      </footer>
+      <a href="" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <script src="/quasarSoft/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="/quasarSoft/vendor/aos/aos.js"></script>
+      <script src="/quasarSoft/js/main.js"></script>
 </body>
 </html>
