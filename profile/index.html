@@ -1,44 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки профиля</title>
+    <script>
+        const setCookie = (key, val, days_till_expiration) => {
+            let d = new Date();
+            d.setTime(d.getTime() + (days_till_expiration * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toGMTString();
+            document.cookie = key + "=" + val + ";" + expires + ";path=/;SameSite=None";
+        }
 
-    const setCookie = (key,val,days_till_expiration,SameSite=None) => {
-      let d = new Date();
-      d.setTime(d.getTime() + (days_till_expiration*24*60*60*1000));
-      const expires = "expires=" + d.toGMTString();
-      document.cookie = key + "=" + val + ";" + expires + ";";
-    }
+        const fetchCookie = () => {
+            const name = "username" + "=";
+            const cookie_array = document.cookie.split(';');
+            for (let i = 0; i < cookie_array.length; i++) {
+                let c = cookie_array[i].trim();
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
 
-    const fetchCookie = () => {
-        const name = "username" + "=";
-        const cookie_array = document.cookie.split(';');
-        for(let i = 0; i < cookie_array.length; i++) {
-            let c = cookie_array[i];
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
+        const getUsername = () => {
+            let username = fetchCookie();
+            if (username !== "") {
+                alert("Welcome again " + username);
+            } else {
+                const inputUsername = document.getElementById("username").value;
+                setCookie("username", inputUsername, 10);
             }
         }
-        return "";
-    }
 
-    const getUserData = () => {
-        let username = fetchCookie();
-        if (username != "") {
-          alert("Welcome again " + username);
-        } else {
-          username = prompt("Please enter your name:","");
-          setCookie("username", username, 30);
+        const alertCookie = () => {
+            alert(document.cookie);
         }
-    }
 
-    const alertCookie = () => {
-      alert(document.cookie);
-    }
-  </script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('profile-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Предотвращаем перезагрузку страницы
+                getUsername();
+                // Здесь можно добавить код для отправки данных на сервер
+                const messageDiv = document.getElementById('message');
+                messageDiv.textContent = 'Изменения успешно сохранены!';
+                messageDiv.style.color = 'green';
+            });
+        });
+    </script>
 </head>
 <body>
-  <h1>Cookies for everyone!</h1>
-  <button onclick="getUserData()">Check for Cookies</button>
+    <div class="container">
+        <h1>Настройки профиля</h1>
+        <form id="profile-form">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-group">
+                <label for="bio">О себе:</label>
+                <textarea id="bio" name="bio" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="avatar">Аватар:</label>
+                <input type="file" id="avatar" name="avatar">
+            </div>
+            <button type="submit">Сохранить изменения</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
 </body>
 </html>
