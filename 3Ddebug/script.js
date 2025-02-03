@@ -9,6 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (username === validUsername && password === validPassword) {
         document.getElementById('message').innerText = 'Авторизация успешна!';
+        window.location.href = '/quasarSoft/3Ddebug/debug.html';
     } else {
         document.getElementById('message').innerText = 'Неверное имя пользователя или пароль.';
     }
