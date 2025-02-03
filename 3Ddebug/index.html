@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Авторизация</title>
-    <script>
-        function runPhpScript() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", "/quasarSoft/3Ddebug/index.php", true);
-            xhr.send();
-        }
-        window.onload = function() {
-            runPhpScript();
-        };
-    </script>
+    <title>Авторизация пользователя</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Запуск PHP скрипта при загрузке страницы</h1>
+    <h1>Авторизация</h1>
+    <form id="loginForm">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required>
+        <br>
+        <button type="submit">Войти</button>
+    </form>
+    <div id="message"></div>
 </body>
 </html>
