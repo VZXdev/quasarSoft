@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки профиля</title>
+     <head>
+      <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <link rel="icon" type="image/png" href="/quasarSoft/img/logo.png" />
+      <title>quasarSoft - Главная</title>
+      <meta charset="UTF-8">
+      <meta content="quasarSoft - лучший б0т клиент Roblox (DLC)" name="description">
+      <meta content="Quasar quasarSoft qs roblox Квазар vzxdev" name="keywords">
+      <meta name="title" content="quasarSoft - Главная">
+      <meta name="description" content="Лучший Roblox клиент">
+      <meta property="og:title" content="quasarSoft - Главная">
+      <meta property="og:description" content="Лучший Roblox клиент">
+      <meta property="og:type" content="website" />
+      <meta name="theme-color" content="#AD069B" />
+      <meta property="og:locale" content="ru_RU" />
+      <meta property="og:site_name" content="quasarSoft" />
+      <meta property="og:image" content="/quasarSoft/img/logo.png" />
+      <meta name="twitter:title" content="quasarSoft - Главная" />
+      <meta name="twitter:description" content="Лучший Roblox клиент" />
+      <script type="application/ld+json">
+         {
+             "@context": "https://schema.org",
+             "@type": "SoftwareApplication",
+             "name": "quasarSoft",
+             "description": "Quasar, самый лучший бесплатный клиент для читов!",
+             "applicationCategory": "Game",
+             "operatingSystem": "Windows, Linux",
+             "offers": {
+                 "@type": "Offer",
+                 "price": "0",
+                 "priceCurrency": "USD"
+             },
+             "datePublished": "2023-08-03"
+         }
+      </script>
+      <link href="vendor/bootstrap/css/bootstrap.min.css">
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="vendor/aos/aos.css" rel="stylesheet">
+      <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link href="css/main.css" rel="stylesheet">
+      <script src="/quasarSoft/js/download.js"></script>
+      <script src="/quasarSoft/js/stats.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="/quasarSoft/snowFlakes/snow.min.css" rel="stylesheet">
+   </head>
+   <body class="index-page">
+      <script src="/quasarSoft/snowFlakes/Snow.js"></script>
+      <script>
+         const now = new Date();
+         const currentMonth = now.getMonth();
+         if (currentMonth === 10 || currentMonth === 11 || currentMonth === 0 || currentMonth === 1) {
+             new Snow({
+                 showSnowBalls: false,
+                 countSnowflake: 30,
+             });}
+      </script>
+      <header>
+         <div>
+            <header id="header" class="header d-flex align-items-center fixed-top ">
+               <div class="container-fluid container-xl position-relative d-flex align-items-center">
+                  <a href="/quasarSoft/" class="logo d-flex align-items-center me-auto">
+                     <img src="/quasarSoft/img/logo.png" alt="NW">
+                     <h1>quasarSoft</h1>
+                  </a>
+                  <nav id="navmenu" class="navmenu">
+                     <ul>
+                        <li><a href="/quasarSoft/">Главная<br></a></li>
+                        <li><a href="/quasarSoft/about/">О нас</a></li>
+                        <li><a href="/quasarSoft/figures/">Фигуры</a></li>
+                        <li><a href="/quasarSoft/profile/">Профиль</a></li>
+                        <li><a href="https://vzxdev.github.io/quasarSoftWiki">Wiki</a></li>
+                     </ul>
+                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                  </nav>
+               </div>
+            </header>
+         </div>
+      </header>
+    <script>
+        const setCookie = (key, val, days_till_expiration) => {
+            let d = new Date();
+            d.setTime(d.getTime() + (days_till_expiration * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toGMTString();
+            document.cookie = key + "=" + val + ";" + expires + ";path=/;SameSite=None";
+        }
+
+        const fetchCookie = () => {
+            const name = "username" + "=";
+            const cookie_array = document.cookie.split(';');
+            for (let i = 0; i < cookie_array.length; i++) {
+                let c = cookie_array[i].trim();
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        const getUsername = () => {
+            let username = fetchCookie();
+            if (username !== "") {
+                alert("Welcome again " + username);
+            } else {
+                const inputUsername = document.getElementById("username").value;
+                setCookie("username", inputUsername, 10);
+            }
+        }
+
+        const alertCookie = () => {
+            alert(document.cookie);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('profile-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Предотвращаем перезагрузку страницы
+                getUsername();
+                // Здесь можно добавить код для отправки данных на сервер
+                const messageDiv = document.getElementById('message');
+                messageDiv.textContent = 'Изменения успешно сохранены!';
+                messageDiv.style.color = 'green';
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Настройки профиля</h1>
+        <form id="profile-form">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-group">
+                <label for="bio">О себе:</label>
+                <textarea id="bio" name="bio" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="avatar">Аватар:</label>
+                <input type="file" id="avatar" name="avatar">
+            </div>
+            <button type="submit">Сохранить изменения</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+</body>
+</html>
