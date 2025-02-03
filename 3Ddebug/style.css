@@ -1,0 +1,79 @@
+/**
+* Template Name: FlexStart
+* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+* Updated: Jun 02 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# Font & Color Variables
+# Help: https://bootstrapmade.com/color-system/
+--------------------------------------------------------------*/
+/* Fonts */
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+  url('Gilroy-Semibold.woff2') format('woff2'),
+  url('Gilroy-Semibold.woff') format('woff'),
+  url('Gilroy-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+/* Global Colors */
+:root {
+  /* Background Color - This color is applied to the background of the entire website as well as individual sections. */
+  --background-color: #121214;
+
+  /* Default Color - This is the default color used for the majority of the text content. */
+  --default-color: #cdcdcd;
+
+  /* Heading Color - This color is used for titles, headings and secondary elements. */
+  --heading-color: white;
+
+  /* Accent Color - This is the main accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out. */
+  --accent-color: #ad069b;
+
+  /* Contrast Color - This is a color used for text when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors. */
+  --contrast-color: white;
+  font-family: 'Gilroy', sans-serif;
+
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #454545;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+.price_container{
+  padding: 30px;
+  text-align: center;
+ }
+
+/* Nav Menu Colors */
+:root {
+  /* Nav Color - This is the default color of the main navmenu links. */
+  --nav-color: white;
+
+  /* Nav Hover Color - This color is applied to main navmenu links when they are hovered over. */
+  --nav-hover-color: rgba(255, 255, 255, 0.8);
+
+  /* Nav Dropdown Background Color - This color is used as the background for dropdown boxes that appear when hovering over primary navigation items. */
+  --nav-dropdown-background-color: #ffffff;
+
+  /* Nav Dropdown Color - This color is used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-color: #212529;
+
+  /* Nav Dropdown Hover Color - Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #5a5aff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
