@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+
+    const setCookie = (key,val,days_till_expiration,SameSite=None) => {
+      let d = new Date();
+      d.setTime(d.getTime() + (days_till_expiration*24*60*60*1000));
+      const expires = "expires=" + d.toGMTString();
+      document.cookie = key + "=" + val + ";" + expires + ";";
+    }
+
+    const fetchCookie = () => {
+        const name = "username" + "=";
+        const cookie_array = document.cookie.split(';');
+        for(let i = 0; i < cookie_array.length; i++) {
+            let c = cookie_array[i];
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    const getUserData = () => {
+        let username = fetchCookie();
+        if (username != "") {
+          alert("Welcome again " + username);
+        } else {
+          username = prompt("Please enter your name:","");
+          setCookie("username", username, 30);
+        }
+    }
+
+    const alertCookie = () => {
+      alert(document.cookie);
+    }
+  </script>
+</head>
+<body>
+  <h1>Cookies for everyone!</h1>
+  <button onclick="getUserData()">Check for Cookies</button>
+</body>
+</html>
