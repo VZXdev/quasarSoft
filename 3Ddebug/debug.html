@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Star Animation</title>
+    <title>3D Debug</title>
     <script>
         // state: 0=uninitialised, 1=running, 2=stopping, 3=stopped
         var animation_state = 0;
@@ -31,7 +31,7 @@
             // Draw background.
             var background = document.getElementById('background');
             if (!background.getContext) {
-                alert('Ваш браузер не поддерживает элементы 2D-холста, попробуйте другой браузер.');
+                alert('Your browser does not support 2d canvas elements, try another browser.');
                 return;
             }
             var background_ctx = background.getContext('2d');
@@ -236,38 +236,40 @@
 <body onload="draw();">
     <div class="flex">
         <div id="options">
-            <label for="star_vertices">Вершины:</label>
+            <label for="star_vertices">Vertices:</label>
             <input type="number" id="star_vertices" value="7" onchange="restart();" />
             <br/>
-            <label for="star_vertices">Звездная плотность:</label>
+            <label for="star_vertices">Star density:</label>
             <input type="number" id="star_density" value="3" onchange="restart();" />
             <br/>
-            <label for="offset">Форма:</label>
+            <label for="offset">Shape:</label>
             <input type="range" id="offset" value="80" onchange="restart();" />
             <br/>
-            <label for="speed">Скорость:</label>
+            <label for="speed">Speed:</label>
             <input type="range" id="speed" value="50" onchange="restart();" />
             <br/>
             <input type="checkbox" id="show_circles" onchange="restart();" />
-            <label for="show_circles">Круги</label>
+            <label for="show_circles">Circles</label>
             <br/>
             <input type="checkbox" id="show_path" onchange="restart();" checked />
             <label for="show_path">Path</label>
             <br/>
             <input type="checkbox" id="show_intra" checked />
-            <label for="show_intra">Межкруговые многоугольники</label>
+            <label for="show_intra">Intra-circle polygons</label>
             <br/>
             <input type="checkbox" id="show_inter" checked />
-            <label for="show_inter">Межкруговые многоугольники</label>
+            <label for="show_inter">Inter-circle polygons</label>
             <br/>
             <input type="checkbox" id="show_points" checked />
-            <label for="show_points">Точки</label>
+            <label for="show_points">Points</label>
         </div>
         <div id="render">
             <canvas id="background" width="800" height="800"></canvas>
             <canvas id="animation" width="800" height="800"></canvas>
         </div>
     </div>
-    
+    Animation by <a href="https://kieranclancy.com/">Kieran Clancy</a>.<br/>
+    Inspired by <a href="https://www.youtube.com/watch?v=oEN0o9ZGmOM">this video</a> by Mathologer (Burkard Polster).<br/>
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 </body>
 </html>
