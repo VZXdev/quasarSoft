@@ -305,8 +305,19 @@
                      </div>
                   </div>
                </div>
+               <script>
+              let clickCount = 0; 
+      
+              function handleClick() {
+                  clickCount++; 
+                  if (clickCount === 5) { 
+                      window.open('https://vzxdev.github.io/quasarSoft/starwars/', '_blank'); 
+                      clickCount = 0; 
+                  }
+              }
+               </script>
                <div class="container copyright text-center mt-4">
-                  Quasar ▪ 2024-2026?
+                  <button onclick="handleClick()">Quasar ▪ 2024-2025</button>
                </div>
             </footer>
          </div>
